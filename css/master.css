@@ -1,0 +1,16 @@
+@import url(fonts.css);
+@import url(header.css);
+
+body {
+    font-family: sans-serif;
+    margin: 0;
+    background: #110C19;
+    color: #FEEBD7;
+}
+
+.center-message {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+} 
