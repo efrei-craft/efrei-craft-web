@@ -3,7 +3,7 @@ version: '3.8'
 services:
   web:
     image: ghcr.io/efrei-craft/efrei-craft-web:master
-    container_name: efrei-craft-web
+    restart: always
     deploy:
       replicas: 1
       restart_policy:
@@ -13,8 +13,9 @@ services:
           - node.role == manager
     labels:
       - "traefik.enable=true"
-      - "traefik.http.routers.website.rule=Host(`efreicraft.fr`)"
-      - "traefik.http.routers.website.entrypoints=websecure"
+      - "traefik.http.routers.efrei-craft-web.rule=Host(`efreicraft.fr`)"
+      - "traefik.http.routers.efrei-craft-web.entrypoints=websecure"
+      - "traefik.http.services.efrei-craft-web.loadbalancer.server.port=80"
     networks:
       - traefik_public
 
