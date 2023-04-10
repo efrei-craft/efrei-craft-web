@@ -11,11 +11,11 @@ services:
       placement:
         constraints:
           - node.role == manager
-    labels:
-      - "traefik.enable=true"
-      - "traefik.http.routers.efrei-craft-web.rule=Host(`efreicraft.fr`)"
-      - "traefik.http.routers.efrei-craft-web.entrypoints=websecure"
-      - "traefik.http.services.efrei-craft-web.loadbalancer.server.port=80"
+      labels:
+        - "traefik.enable=true"
+        - "traefik.http.routers.efrei-craft-web.rule=Host(`efreicraft.fr`)"
+        - "traefik.http.routers.efrei-craft-web.entrypoints=websecure"
+        - "traefik.http.services.efrei-craft-web.loadbalancer.server.port=80"
     networks:
       - traefik_public
 
