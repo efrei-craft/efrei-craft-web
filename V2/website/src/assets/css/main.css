@@ -1,0 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
+@import "tailwindcss";
+
+body {
+    place-items: initial;
+}
+
+#app {
+    width: 100%;
+    padding: 0;
+}
+
+:root {
+    --color-primary: #00c811;
+    --color-secondary: #1fff9a;
+    --color-accent: #9333ea;
+    --color-neutral: #374151;
+    --color-base-100: #ffffff;
+    --color-base-200: #f3f4f6;
+    --color-base-300: #e5e7eb;
+}
+
+.color-primary {
+    color: var(--color-primary);
+}
