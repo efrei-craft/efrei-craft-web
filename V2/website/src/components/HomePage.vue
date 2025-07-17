@@ -55,8 +55,6 @@
 <script setup lang="ts">
 import { ref } from 'vue'
 
-const mobileMenuOpen = ref(false)
-
 const isServerDropdownOpen = ref(false)
 
 const servers = [
@@ -67,7 +65,7 @@ const servers = [
 
 const selectedServer = ref(servers[0])
 
-const selectServer = (server) => {
+const selectServer = (server: any) => {
   selectedServer.value = server
 }
 
